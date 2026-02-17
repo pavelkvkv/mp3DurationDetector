@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/TestCppApp.dir/src/main.cpp.o -o TestCppApp  ../libDurationMp3Lib.a -Wl,--whole-archive /media/lenovo/Drive/Work_MLplatform/GIT/Modules/mp3DurationDetector/TestCppApp/../mp3DurationDetectorRs/target/release/libmp3_duration_detector_rs.a -Wl,--no-whole-archive -lpthread -ldl -lm 

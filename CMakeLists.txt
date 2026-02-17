@@ -71,7 +71,9 @@ if(MP3_BUILD_RUST)
     )
     add_custom_target(mp3_rust_build DEPENDS ${MP3_RUST_LIB_PATH})
     add_dependencies(DurationMp3Lib mp3_rust_build)
-    target_link_libraries(DurationMp3Lib PUBLIC ${MP3_RUST_LIB_PATH})
+    target_link_libraries(DurationMp3Lib PUBLIC
+        -Wl,--whole-archive ${MP3_RUST_LIB_PATH} -Wl,--no-whole-archive
+    )
 
 elseif(MP3_LINK_RUST)
     # --- Линковка готового .a (путь задан пользователем или по умолчанию) ---
@@ -81,7 +83,9 @@ elseif(MP3_LINK_RUST)
     endif()
 
     if(EXISTS "${MP3_RUST_LIB_PATH}")
-        target_link_libraries(DurationMp3Lib PUBLIC ${MP3_RUST_LIB_PATH})
+        target_link_libraries(DurationMp3Lib PUBLIC
+            -Wl,--whole-archive ${MP3_RUST_LIB_PATH} -Wl,--no-whole-archive
+        )
         message(STATUS "mp3DurationDetector: linking pre-built Rust lib: ${MP3_RUST_LIB_PATH}")
     else()
         message(WARNING "mp3DurationDetector: Rust library not found at ${MP3_RUST_LIB_PATH}, "

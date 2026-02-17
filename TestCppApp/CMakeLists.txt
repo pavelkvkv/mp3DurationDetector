@@ -35,8 +35,11 @@ else()
 endif()
 
 # Линкуем Rust static library (если собрана)
+# --whole-archive нужен, чтобы Rust-символы перекрыли weak-заглушки в mp3_lib.cpp
 if(EXISTS "${RUST_LIB_PATH}")
-    target_link_libraries(TestCppApp PRIVATE ${RUST_LIB_PATH})
+    target_link_libraries(TestCppApp PRIVATE
+        -Wl,--whole-archive ${RUST_LIB_PATH} -Wl,--no-whole-archive
+    )
     message(STATUS "TestCppApp: linking Rust lib from ${RUST_LIB_PATH}")
 else()
     message(STATUS "TestCppApp: Rust lib not found, weak stubs will be used")
