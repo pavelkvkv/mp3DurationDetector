@@ -1,0 +1,19 @@
+[package]
+name = "mp3_duration_detector_rs"
+version = "0.1.0"
+edition = "2021"
+description = "Rust MP3 duration detector — stub implementation"
+
+[lib]
+name = "mp3_duration_detector_rs"
+crate-type = ["staticlib"]
+
+[dependencies]
+
+[profile.release]
+opt-level = "s"
+lto = true
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
