@@ -1,6 +1,0 @@
-/media/lenovo/Drive/Work_MLplatform/GIT/Modules/mp3DurationDetector/build/CMakeFiles/DurationMp3Lib.dir
-/media/lenovo/Drive/Work_MLplatform/GIT/Modules/mp3DurationDetector/build/CMakeFiles/edit_cache.dir
-/media/lenovo/Drive/Work_MLplatform/GIT/Modules/mp3DurationDetector/build/CMakeFiles/rebuild_cache.dir
-/media/lenovo/Drive/Work_MLplatform/GIT/Modules/mp3DurationDetector/build/TestCppApp/CMakeFiles/TestCppApp.dir
-/media/lenovo/Drive/Work_MLplatform/GIT/Modules/mp3DurationDetector/build/TestCppApp/CMakeFiles/edit_cache.dir
-/media/lenovo/Drive/Work_MLplatform/GIT/Modules/mp3DurationDetector/build/TestCppApp/CMakeFiles/rebuild_cache.dir
